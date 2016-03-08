@@ -3,42 +3,52 @@
 doctype html
 html(lang="ru")
     head
+        meta(charset="utf-8")
         title HTML Academy: Technomart
+        link(href="css/normalize.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
     body
-        header.container
-            ul.header__top-menu
-                li
-                    a.red-button Техномарт
-                li
-                    a Поиск
-                li
-                    a Закладки
-                li
-                    a Корзина
-                li
-                    a.nav-green-button Оформить заказ
-            section
-                p Интернет-магазин строительных материалов и инструментов для ремонта
-            section
-                p.header__phone +7 (812) 555-05-55
-                p.header__address г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            section
-                a.header__log-in.white-button Войти
-                a.header__register.white-button Регистрация
-            nav
-                ul.header__main-menu
-                    li
-                        a.header__main-menu__button Главная
-                    li
-                        a.header__main-menu__button Компания
-                    li
-                        a.header__main-menu__button Каталог
-                    li
-                        a.header__main-menu__button Новости
-                    li
-                        a.header__main-menu__button Спецпредложения
-                    li
-                        a.header__main-menu__button Доставка
-                    li
-                        a.header__main-menu__button Контакты
-                    
+        header.clearfix
+            .header__top-menu.clearfix                
+                .container
+                    ul.top-menu-left.clearfix
+                        li
+                            a(href="#").red-button Техномарт
+                        li
+                            a(href="#") Поиск
+                    ul.top-menu-right.clearfix
+                        li
+                            a(href="#") Закладки: 
+                                span 0
+                        li
+                            a(href="#") Корзина: 
+                                span 0
+                        li
+                            a(href="#").nav-green-button Оформить заказ
+            .container.clearfix
+                section
+                    p Интернет-магазин строительных материалов и инструментов для ремонта
+                section
+                    p.header__phone +7 (812) 555-05-55
+                    p.header__address г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                section
+                    a.header__log-in.white-button Войти
+                    a.header__register.white-button Регистрация
+            .container.clearfix
+                nav
+                    ul.header__main-menu
+                        li
+                            a.header__main-menu__button Главная
+                        li
+                            a.header__main-menu__button Компания
+                        li
+                            a.header__main-menu__button Каталог
+                        li
+                            a.header__main-menu__button Новости
+                        li
+                            a.header__main-menu__button Спецпредложения
+                        li
+                            a.header__main-menu__button Доставка
+                        li
+                            a.header__main-menu__button Контакты
+                            

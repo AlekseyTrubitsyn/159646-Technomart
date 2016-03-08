@@ -1,5 +1,72 @@
+$super-light-blue: #f1f5f7;
 $dark-blue: #293449;
+$light-red: #ee3643;
+$green: #63a63e;
+$container-width: 940px;
+
+.container {
+    width: $container-width;
+    display: block;
+    margin: 0 auto;
+}
+
+header,
+ul,
+li {
+    margin: 0;
+}
+
 header {
-    background: $dark-blue;
-    color: #fff;
+
+    background: $super-light-blue;
+
+    .header__top-menu {
+        background: $dark-blue;
+        color: #fff;
+        display: block;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+        };
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 8px 20px ;
+            color: #fff;
+            line-height: 24px;
+        };
+
+        .red-button {
+            width: 220px;
+            box-sizing: border-box;
+            text-align: center;
+            background: $light-red;
+            border-bottom: 5px solid rgba(0,0,0,0.24);
+            margin-bottom: -5px;
+            text-transform: uppercase;
+        }
+
+        .nav-green-button {
+            background: $green;
+            min-width: 150px;
+            box-sizing: border-box;
+        }
+    }
+
+    .top-menu-left { float: left; }
+
+    .top-menu-right { float: right; }
+
+    section {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }

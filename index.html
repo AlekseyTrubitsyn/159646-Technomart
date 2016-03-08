@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <meta charset="utf-8">
     <title>HTML Academy: Technomart</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="container">
-      <ul class="header__top-menu">
-        <li><a class="red-button">Техномарт</a></li>
-        <li><a>Поиск</a></li>
-        <li><a>Закладки</a></li>
-        <li><a>Корзина</a></li>
-        <li><a class="nav-green-button">Оформить заказ</a></li>
-      </ul>
-      <section>
-        <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-      </section>
-      <section>
-        <p class="header__phone">+7 (812) 555-05-55</p>
-        <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-      </section>
-      <section><a class="header__log-in white-button">Войти</a><a class="header__register white-button">Регистрация</a></section>
-      <nav>
-        <ul class="header__main-menu">
-          <li><a class="header__main-menu__button">Главная</a></li>
-          <li><a class="header__main-menu__button">Компания</a></li>
-          <li><a class="header__main-menu__button">Каталог</a></li>
-          <li><a class="header__main-menu__button">Новости</a></li>
-          <li><a class="header__main-menu__button">Спецпредложения</a></li>
-          <li><a class="header__main-menu__button">Доставка</a></li>
-          <li><a class="header__main-menu__button">Контакты</a></li>
-        </ul>
-      </nav>
+    <header class="clearfix">
+      <div class="header__top-menu clearfix">               
+        <div class="container">
+          <ul class="top-menu-left clearfix">
+            <li><a href="#" class="red-button">Техномарт</a></li>
+            <li><a href="#">Поиск</a></li>
+          </ul>
+          <ul class="top-menu-right clearfix">
+            <li><a href="#">Закладки: <span>0</span></a></li>
+            <li><a href="#">Корзина: <span>0</span></a></li>
+            <li><a href="#" class="nav-green-button">Оформить заказ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container clearfix">
+        <section>
+          <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+        </section>
+        <section>
+          <p class="header__phone">+7 (812) 555-05-55</p>
+          <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </section>
+        <section><a class="header__log-in white-button">Войти</a><a class="header__register white-button">Регистрация</a></section>
+      </div>
+      <div class="container clearfix">
+        <nav>
+          <ul class="header__main-menu">
+            <li><a class="header__main-menu__button">Главная</a></li>
+            <li><a class="header__main-menu__button">Компания</a></li>
+            <li><a class="header__main-menu__button">Каталог</a></li>
+            <li><a class="header__main-menu__button">Новости</a></li>
+            <li><a class="header__main-menu__button">Спецпредложения</a></li>
+            <li><a class="header__main-menu__button">Доставка</a></li>
+            <li><a class="header__main-menu__button">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
   </body>
 </html>
