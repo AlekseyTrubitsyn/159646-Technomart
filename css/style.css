@@ -121,6 +121,27 @@ header .header__login-block .header__log-in {
   padding-left: 48px;
 }
 
+header .header__main-menu {
+  font-size: 0;
+  margin-top: 40px;
+}
+
+header .header__main-menu li {
+  display: inline-block;
+  vertical-align: top;
+  width: 14.28%;
+}
+
+header .header__main-menu a {
+  font-size: 17px;
+  display: block;
+  padding: 15px 0;
+  color: white;
+  background: #32425c;
+  border-bottom: 5px solid #293449;
+  text-align: center;
+}
+
 .clearfix::after {
   content: "";
   display: table;

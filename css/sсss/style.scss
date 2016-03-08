@@ -1,5 +1,6 @@
 $super-light-blue: #f1f5f7;
 $dark-blue: #293449;
+$navigation-bg-blue: #32425c;
 $text-dark-blue: #32425c;
 $light-red: #ee3643;
 $green: #63a63e;
@@ -122,6 +123,27 @@ header {
         }
 
         .header__log-in { padding-left: 48px; }
+    }
+
+    .header__main-menu {
+        font-size: 0;
+        margin-top: 40px;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 14.28%;
+        }
+
+        a {
+            font-size: 17px;
+            display: block;
+            padding: 15px 0;
+            color: white;
+            background: $navigation-bg-blue;
+            border-bottom: 5px solid $dark-blue;
+            text-align: center;
+        }
     }
 }
 
