@@ -1,9 +1,16 @@
 $super-light-blue: #f1f5f7;
 $dark-blue: #293449;
+$text-dark-blue: #32425c;
 $light-red: #ee3643;
 $green: #63a63e;
+$phone-border-color: #fff;
 $container-width: 940px;
 
+body {
+    font-family: Cuprum, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
 .container {
     width: $container-width;
     display: block;
@@ -14,7 +21,10 @@ header,
 ul,
 li {
     margin: 0;
+    padding: 0;
 }
+
+.white-button {background: #fff; }
 
 header {
 
@@ -41,6 +51,8 @@ header {
         .red-button {
             width: 220px;
             box-sizing: border-box;
+            font-weight: 700;
+            font-size: 24px;
             text-align: center;
             background: $light-red;
             border-bottom: 5px solid rgba(0,0,0,0.24);
@@ -62,6 +74,54 @@ header {
     section {
         width: 33.33%;
         float: left;
+        margin-top: 43px;
+        box-sizing: border-box;
+    }
+
+    .header__description {
+        padding: 0 53px;
+        color: $light-red;
+
+        h1 {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .header__phone-address {
+        p {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .header__phone {
+            width: 270px;
+            box-sizing: border-box;
+            padding: 8px 45px;
+            color: $light-red;
+            font-size: 21px;
+            border: 3px solid $phone-border-color;
+        }
+
+        .header__address {
+            font-size: 14px;
+            margin-top: 7px;
+            color: $text-dark-blue;
+        }
+    }
+
+    .header__login-block {
+        a {
+            font-size: 21px;
+            padding: 12px 27px;
+            float: right;
+            margin-left: 10px;
+        }
+
+        .header__log-in { padding-left: 48px; }
     }
 }
 
@@ -69,4 +129,28 @@ header {
     content: "";
     display: table;
     clear: both;
+}
+
+@font-face {
+    font-family: Cuprum;
+    font-weight: 400;
+    src: url(../fonts/Cuprum.woff);
+}
+
+@font-face {
+    font-family: Cuprum;
+    font-weight: 700;
+    src: url(../fonts/Cuprumbold.woff);
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    src: url(../fonts/PTSans.woff);
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    src: url(../fonts/PTSansbold.woff);
 }

@@ -1,3 +1,9 @@
+body {
+  font-family: Cuprum, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+}
+
 .container {
   width: 940px;
   display: block;
@@ -8,6 +14,11 @@ header,
 ul,
 li {
   margin: 0;
+  padding: 0;
+}
+
+.white-button {
+  background: #fff;
 }
 
 header {
@@ -36,6 +47,8 @@ header .header__top-menu a {
 header .header__top-menu .red-button {
   width: 220px;
   box-sizing: border-box;
+  font-weight: 700;
+  font-size: 24px;
   text-align: center;
   background: #ee3643;
   border-bottom: 5px solid rgba(0, 0, 0, 0.24);
@@ -60,12 +73,82 @@ header .top-menu-right {
 header section {
   width: 33.33%;
   float: left;
+  margin-top: 43px;
+  box-sizing: border-box;
+}
+
+header .header__description {
+  padding: 0 53px;
+  color: #ee3643;
+}
+
+header .header__description h1 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+header .header__phone-address p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+header .header__phone-address .header__phone {
+  width: 270px;
+  box-sizing: border-box;
+  padding: 8px 45px;
+  color: #ee3643;
+  font-size: 21px;
+  border: 3px solid #fff;
+}
+
+header .header__phone-address .header__address {
+  font-size: 14px;
+  margin-top: 7px;
+  color: #32425c;
+}
+
+header .header__login-block a {
+  font-size: 21px;
+  padding: 12px 27px;
+  float: right;
+  margin-left: 10px;
+}
+
+header .header__login-block .header__log-in {
+  padding-left: 48px;
 }
 
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
+}
+
+@font-face {
+  font-family: Cuprum;
+  font-weight: 400;
+  src: url(../fonts/Cuprum.woff);
+}
+
+@font-face {
+  font-family: Cuprum;
+  font-weight: 700;
+  src: url(../fonts/Cuprumbold.woff);
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-weight: 400;
+  src: url(../fonts/PTSans.woff);
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-weight: 700;
+  src: url(../fonts/PTSansbold.woff);
 }
 
 /*# sourceMappingURL=style.css.map */
