@@ -36,12 +36,12 @@ header {
         color: #fff;
         display: block;
 
-        li {
+        .header__topMenu-li {
             display: inline-block;
             vertical-align: top;
         };
 
-        a {
+        .header__topMenu-button {
             display: block;
             text-decoration: none;
             padding: 8px 20px ;
@@ -68,11 +68,11 @@ header {
         }
     }
 
-    .top-menu-left { float: left; }
+    .header__topMenu-left { float: left; }
 
-    .top-menu-right { float: right; }
+    .header__topMenu-right { float: right; }
 
-    section {
+    .header__section {
         width: 33.33%;
         float: left;
         margin-top: 43px;
@@ -83,7 +83,7 @@ header {
         padding: 0 53px;
         color: $light-red;
 
-        h1 {
+        .header__description-title {
             font-style: italic;
             font-weight: 400;
             font-size: 16px;
@@ -92,8 +92,8 @@ header {
         }
     }
 
-    .header__phone-address {
-        p {
+    .header__phoneAddress {
+        .header__phoneAddress-p {
             margin: 0 auto;
             text-align: center;
         }
@@ -115,7 +115,7 @@ header {
     }
 
     .header__login-block {
-        a {
+        .white-button {
             font-size: 21px;
             padding: 12px 27px;
             float: right;
@@ -125,17 +125,17 @@ header {
         .header__log-in { padding-left: 48px; }
     }
 
-    .header__main-menu {
+    .header__mainMenu {
         font-size: 0;
         margin-top: 40px;
 
-        li {
+        .header__mainMenu-li {
             display: inline-block;
             vertical-align: top;
             width: 14.28%;
         }
 
-        a {
+        .header__mainMenu-button {
             font-size: 17px;
             display: block;
             padding: 15px 0;

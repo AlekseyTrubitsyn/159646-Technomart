@@ -31,12 +31,12 @@ header .header__top-menu {
   display: block;
 }
 
-header .header__top-menu li {
+header .header__top-menu .header__topMenu-li {
   display: inline-block;
   vertical-align: top;
 }
 
-header .header__top-menu a {
+header .header__top-menu .header__topMenu-button {
   display: block;
   text-decoration: none;
   padding: 8px 20px;
@@ -62,15 +62,15 @@ header .header__top-menu .nav-green-button {
   box-sizing: border-box;
 }
 
-header .top-menu-left {
+header .header__topMenu-left {
   float: left;
 }
 
-header .top-menu-right {
+header .header__topMenu-right {
   float: right;
 }
 
-header section {
+header .header__section {
   width: 33.33%;
   float: left;
   margin-top: 43px;
@@ -82,7 +82,7 @@ header .header__description {
   color: #ee3643;
 }
 
-header .header__description h1 {
+header .header__description .header__description-title {
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -90,12 +90,12 @@ header .header__description h1 {
   padding: 0;
 }
 
-header .header__phone-address p {
+header .header__phoneAddress .header__phoneAddress-p {
   margin: 0 auto;
   text-align: center;
 }
 
-header .header__phone-address .header__phone {
+header .header__phoneAddress .header__phone {
   width: 270px;
   box-sizing: border-box;
   padding: 8px 45px;
@@ -104,13 +104,13 @@ header .header__phone-address .header__phone {
   border: 3px solid #fff;
 }
 
-header .header__phone-address .header__address {
+header .header__phoneAddress .header__address {
   font-size: 14px;
   margin-top: 7px;
   color: #32425c;
 }
 
-header .header__login-block a {
+header .header__login-block .white-button {
   font-size: 21px;
   padding: 12px 27px;
   float: right;
@@ -121,18 +121,18 @@ header .header__login-block .header__log-in {
   padding-left: 48px;
 }
 
-header .header__main-menu {
+header .header__mainMenu {
   font-size: 0;
   margin-top: 40px;
 }
 
-header .header__main-menu li {
+header .header__mainMenu .header__mainMenu-li {
   display: inline-block;
   vertical-align: top;
   width: 14.28%;
 }
 
-header .header__main-menu a {
+header .header__mainMenu .header__mainMenu-button {
   font-size: 17px;
   display: block;
   padding: 15px 0;

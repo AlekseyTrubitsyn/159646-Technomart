@@ -9,45 +9,45 @@ html(lang="ru")
         link(href="css/style.css" rel="stylesheet")
     body
         header.clearfix
-            .header__top-menu.clearfix                
+            .header__topMenu.clearfix                
                 .container
-                    ul.top-menu-left.clearfix
-                        li
-                            a(href="#").red-button Техномарт
-                        li
-                            a(href="#") Поиск:
-                    ul.top-menu-right.clearfix
-                        li
-                            a(href="#") Закладки: 
+                    ul.header__topMenu-left.clearfix
+                        li.header__topMenu-li
+                            a(href="#").redButton Техномарт
+                        li.header__topMenu-li
+                            a(href="#").header__topMenu-button.topMenu__button_search Поиск:
+                    ul.header__topMenu-right.clearfix
+                        li.header__topMenu-li
+                            a(href="#").header__topMenu-button.topMenu__button_bookmarks Закладки: 
                                 span 0
-                        li
-                            a(href="#") Корзина: 
+                        li.header__topMenu-li
+                            a(href="#").header__topMenu-button.topMenu__button_cart Корзина: 
                                 span 0
-                        li
-                            a(href="#").nav-green-button Оформить заказ
+                        li.header__topMenu-li
+                            a(href="#").nav-green-button.topMenu__button_order Оформить заказ
             .container.clearfix
-                section.header__description
-                    h1 Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов для ремонта
-                section.header__phone-address
-                    p.header__phone +7 (812) 555-05-55
-                    p.header__address г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-                section.header__login-block.clearfix
-                    a.header__register.white-button Регистрация
-                    a.header__log-in.white-button Войти
+                section.header__section.header__description
+                    h1.header__description-title Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов для ремонта
+                section.header__section.header__phoneAddress
+                    p.header__phoneAddress-p.header__phone +7 (812) 555-05-55
+                    p.header__phoneAddress-p.header__address г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                section.header__section.header__login-block.clearfix
+                    a.white-button.header__register Регистрация
+                    a.white-button.header__log-in Войти
             .container.clearfix
-                nav
-                    ul.header__main-menu
-                        li
-                            a.header__main-menu__button Главная
-                        li
-                            a.header__main-menu__button Компания
-                        li
-                            a.header__main-menu__button Каталог
-                        li
-                            a.header__main-menu__button Новости
-                        li
-                            a.header__main-menu__button Спецпредложения
-                        li
-                            a.header__main-menu__button Доставка
-                        li
-                            a.header__main-menu__button Контакты
+                nav.header__navigationBlock
+                    ul.header__mainMenu
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Главная
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Компания
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Каталог
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Новости
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Спецпредложения
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Доставка
+                        li.header__mainMenu-li
+                            a.header__mainMenu-button Контакты
