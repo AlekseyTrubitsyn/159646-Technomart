@@ -6,6 +6,7 @@ $light-grey: #f1f5f7;
 $medium-dark-blue: #32425c;
 $dark-blue: #293449;
 $ultra-dark-blue: #212a3a;
+$mega-dark-blue: #1d2739;
 $super-dark-blue: #161d29;
 
 $red: #ee3643;
@@ -34,8 +35,15 @@ $greenButton-active-text: rgba(255,255,255,.51);
 /* - description-contacts-login */
 $phone-border-color: #fff;
 $text-dark-blue: $dark-blue;
+$header-whiteButton-text: #000;
+$header-whiteButton-text-hover: $red;
+$header-whiteButton-text-active: rgba(0,0,0,.3);
+
 /* - navigation */
-$headert-navigation-background: $medium-dark-blue;
+$header-navigation-background: $medium-dark-blue;
+$header-navigation-background-hover: $dark-blue;
+$header-navigation-background-active: $mega-dark-blue;
+$header-navigation-background-active-text: rgba(255,255,255,.5);
 
 body {
     font-family: Cuprum, Arial, sans-serif;
@@ -185,8 +193,12 @@ header {
             padding: 12px 27px;
             float: right;
             margin-left: 10px;
-            color: #000;
+            color: $header-whiteButton-text;
         }
+
+        .white-button:hover { color: $header-whiteButton-text-hover; }
+
+        .white-button:active { color: $header-whiteButton-text-active; }
 
         .header__log-in { padding-left: 48px; }
     }
@@ -206,9 +218,16 @@ header {
             display: block;
             padding: 15px 0;
             color: white;
-            background: $headert-navigation-background;
+            background-color: $header-navigation-background;
             border-bottom: 5px solid $dark-blue;
             text-align: center;
+        }
+
+        .header__mainMenu-button:hover {background-color: $header-navigation-background-hover; }
+
+        .header__mainMenu-button:active {
+            background-color: $header-navigation-background-active;
+            color: $header-navigation-background-active-text;
         }
     }
 }

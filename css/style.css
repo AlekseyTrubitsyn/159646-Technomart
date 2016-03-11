@@ -168,6 +168,14 @@ header .header__login-block .white-button {
   color: #000;
 }
 
+header .header__login-block .white-button:hover {
+  color: #ee3643;
+}
+
+header .header__login-block .white-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 header .header__login-block .header__log-in {
   padding-left: 48px;
 }
@@ -188,9 +196,18 @@ header .header__mainMenu .header__mainMenu-button {
   display: block;
   padding: 15px 0;
   color: white;
-  background: #32425c;
+  background-color: #32425c;
   border-bottom: 5px solid #293449;
   text-align: center;
+}
+
+header .header__mainMenu .header__mainMenu-button:hover {
+  background-color: #293449;
+}
+
+header .header__mainMenu .header__mainMenu-button:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .clearfix::after {
