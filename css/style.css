@@ -219,25 +219,25 @@ header .header__mainMenu .header__mainMenu-button:active {
 @font-face {
   font-family: Cuprum;
   font-weight: 400;
-  src: url(../fonts/Cuprum.woff);
+  src: url(../fonts/cuprum.woff);
 }
 
 @font-face {
   font-family: Cuprum;
   font-weight: 700;
-  src: url(../fonts/Cuprumbold.woff);
+  src: url(../fonts/cuprumbold.woff);
 }
 
 @font-face {
   font-family: 'PT Sans';
   font-weight: 400;
-  src: url(../fonts/PTSans.woff);
+  src: url(../fonts/ptsans.woff);
 }
 
 @font-face {
   font-family: 'PT Sans';
   font-weight: 700;
-  src: url(../fonts/PTSansbold.woff);
+  src: url(../fonts/ptsansbold.woff);
 }
 
 /*# sourceMappingURL=style.css.map */
