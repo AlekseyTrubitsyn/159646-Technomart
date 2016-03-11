@@ -17,6 +17,11 @@ li {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  display: block;
+}
+
 .white-button {
   background: #fff;
 }
@@ -25,26 +30,25 @@ header {
   background: #f1f5f7;
 }
 
-header .header__top-menu {
+header .header__topMenu {
   background: #293449;
   color: #fff;
   display: block;
 }
 
-header .header__top-menu .header__topMenu-li {
+header .header__topMenu .header__topMenu-li {
   display: inline-block;
   vertical-align: top;
 }
 
-header .header__top-menu .header__topMenu-button {
+header .header__topMenu .header__topMenu-button {
   display: block;
-  text-decoration: none;
   padding: 8px 20px;
-  color: #fff;
   line-height: 24px;
+  color: #fff;
 }
 
-header .header__top-menu .red-button {
+header .header__topMenu .redButton {
   width: 220px;
   box-sizing: border-box;
   font-weight: 700;
@@ -56,7 +60,7 @@ header .header__top-menu .red-button {
   text-transform: uppercase;
 }
 
-header .header__top-menu .nav-green-button {
+header .header__topMenu .nav-green-button {
   background: #63a63e;
   min-width: 150px;
   box-sizing: border-box;

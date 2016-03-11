@@ -25,13 +25,18 @@ li {
     padding: 0;
 }
 
+ a {
+    text-decoration: none;
+    display: block;
+ }
+
 .white-button {background: #fff; }
 
 header {
 
     background: $super-light-blue;
 
-    .header__top-menu {
+    .header__topMenu {
         background: $dark-blue;
         color: #fff;
         display: block;
@@ -43,13 +48,12 @@ header {
 
         .header__topMenu-button {
             display: block;
-            text-decoration: none;
             padding: 8px 20px ;
-            color: #fff;
             line-height: 24px;
+            color: #fff;
         };
 
-        .red-button {
+        .redButton {
             width: 220px;
             box-sizing: border-box;
             font-weight: 700;
