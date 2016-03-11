@@ -1,11 +1,41 @@
-$super-light-blue: #f1f5f7;
-$dark-blue: #293449;
-$navigation-bg-blue: #32425c;
-$text-dark-blue: #32425c;
-$light-red: #ee3643;
-$green: #63a63e;
-$phone-border-color: #fff;
+/* Body */
 $container-width: 940px;
+
+$light-grey: #f1f5f7;
+
+$medium-dark-blue: #32425c;
+$dark-blue: #293449;
+$ultra-dark-blue: #212a3a;
+$super-dark-blue: #161d29;
+
+$red: #ee3643;
+$medium-red: #ca2c37;
+$dark-red: #ba2732;
+
+$green: #63a63e;
+$light-green: #5fbb2d;
+$dark-green: #518534;
+
+/* Header */
+/* - top-menu*/
+$header-background-light-grey-blue: $light-grey;
+$header-topMenu-background: $dark-blue;
+$header-topMenu-background-hover: $ultra-dark-blue;
+$header-topMenu-background-active: $super-dark-blue;
+$header-topMenu-background-active-text: rgba(255,255,255,.6);
+$redButton: $red;
+$redButton-hover: $medium-red;
+$redButton-active: $dark-red;
+$greenButton: $green;
+$greenButton-hover: $light-green;
+$greenButton-active: $dark-green;
+$greenButton-active-text: rgba(255,255,255,.51);
+
+/* - description-contacts-login */
+$phone-border-color: #fff;
+$text-dark-blue: $dark-blue;
+/* - navigation */
+$headert-navigation-background: $medium-dark-blue;
 
 body {
     font-family: Cuprum, Arial, sans-serif;
@@ -32,25 +62,35 @@ li {
 
 .white-button {background: #fff; }
 
+// .background-from-sprite { background: url(..img/sprt.png) no-repeat; }
+
 header {
 
-    background: $super-light-blue;
+    font-size: 0;
+    background: $header-background-light-grey-blue;
 
     .header__topMenu {
-        background: $dark-blue;
+
+        background: $header-topMenu-background;
         color: #fff;
         display: block;
 
         .header__topMenu-li {
             display: inline-block;
             vertical-align: top;
-        };
+
+            :hover { background-color: $header-topMenu-background-hover; }
+            :active { background-color: $header-topMenu-background-active; }
+        }
 
         .header__topMenu-button {
+            font-size: 17px;
             display: block;
             padding: 8px 20px ;
             line-height: 24px;
             color: #fff;
+
+            .topMenu__button_search { color: $header-topMenu-background-active-text; };
         };
 
         .redButton {
@@ -59,17 +99,35 @@ header {
             font-weight: 700;
             font-size: 24px;
             text-align: center;
-            background: $light-red;
+            background: $redButton;
             border-bottom: 5px solid rgba(0,0,0,0.24);
             margin-bottom: -5px;
             text-transform: uppercase;
         }
 
+        .redButton:hover { background-color: $redButton-hover; }
+
+        .redButton:active { background-color: $redButton-active; }
+
         .nav-green-button {
-            background: $green;
+            background: $greenButton;
             min-width: 150px;
             box-sizing: border-box;
         }
+
+        .greenButton:hover { background-color: $greenButton-hover; }
+
+        .greenButton:active {
+            background-color: $greenButton-active;
+            color: $greenButton-active-text;
+        }
+
+        .background-from-sprite { padding-left: 49px; }
+    }
+
+    .header__topMenu-left,
+    .header__topMenu-right {
+        max-width: 49%
     }
 
     .header__topMenu-left { float: left; }
@@ -85,7 +143,7 @@ header {
 
     .header__description {
         padding: 0 53px;
-        color: $light-red;
+        color: $red;
 
         .header__description-title {
             font-style: italic;
@@ -106,7 +164,7 @@ header {
             width: 270px;
             box-sizing: border-box;
             padding: 8px 45px;
-            color: $light-red;
+            color: $red;
             font-size: 21px;
             border: 3px solid $phone-border-color;
         }
@@ -124,6 +182,7 @@ header {
             padding: 12px 27px;
             float: right;
             margin-left: 10px;
+            color: #000;
         }
 
         .header__log-in { padding-left: 48px; }
@@ -144,7 +203,7 @@ header {
             display: block;
             padding: 15px 0;
             color: white;
-            background: $navigation-bg-blue;
+            background: $headert-navigation-background;
             border-bottom: 5px solid $dark-blue;
             text-align: center;
         }

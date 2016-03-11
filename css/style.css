@@ -1,3 +1,8 @@
+/* Body */
+/* Header */
+/* - top-menu*/
+/* - description-contacts-login */
+/* - navigation */
 body {
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
@@ -27,6 +32,7 @@ a {
 }
 
 header {
+  font-size: 0;
   background: #f1f5f7;
 }
 
@@ -41,11 +47,24 @@ header .header__topMenu .header__topMenu-li {
   vertical-align: top;
 }
 
+header .header__topMenu .header__topMenu-li :hover {
+  background-color: #212a3a;
+}
+
+header .header__topMenu .header__topMenu-li :active {
+  background-color: #161d29;
+}
+
 header .header__topMenu .header__topMenu-button {
+  font-size: 17px;
   display: block;
   padding: 8px 20px;
   line-height: 24px;
   color: #fff;
+}
+
+header .header__topMenu .header__topMenu-button .topMenu__button_search {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 header .header__topMenu .redButton {
@@ -60,10 +79,36 @@ header .header__topMenu .redButton {
   text-transform: uppercase;
 }
 
+header .header__topMenu .redButton:hover {
+  background-color: #ca2c37;
+}
+
+header .header__topMenu .redButton:active {
+  background-color: #ba2732;
+}
+
 header .header__topMenu .nav-green-button {
   background: #63a63e;
   min-width: 150px;
   box-sizing: border-box;
+}
+
+header .header__topMenu .greenButton:hover {
+  background-color: #5fbb2d;
+}
+
+header .header__topMenu .greenButton:active {
+  background-color: #518534;
+  color: rgba(255, 255, 255, 0.51);
+}
+
+header .header__topMenu .background-from-sprite {
+  padding-left: 49px;
+}
+
+header .header__topMenu-left,
+header .header__topMenu-right {
+  max-width: 49%;
 }
 
 header .header__topMenu-left {
@@ -111,7 +156,7 @@ header .header__phoneAddress .header__phone {
 header .header__phoneAddress .header__address {
   font-size: 14px;
   margin-top: 7px;
-  color: #32425c;
+  color: #293449;
 }
 
 header .header__login-block .white-button {
@@ -119,6 +164,7 @@ header .header__login-block .white-button {
   padding: 12px 27px;
   float: right;
   margin-left: 10px;
+  color: #000;
 }
 
 header .header__login-block .header__log-in {
