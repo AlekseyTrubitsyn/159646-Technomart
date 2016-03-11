@@ -53,6 +53,11 @@ header .header__topMenu .header__topMenu-li :hover {
 
 header .header__topMenu .header__topMenu-li :active {
   background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+header .header__topMenu .topMenu__button_search:active {
+  color: #fff;
 }
 
 header .header__topMenu .header__topMenu-button {
@@ -61,10 +66,6 @@ header .header__topMenu .header__topMenu-button {
   padding: 8px 20px;
   line-height: 24px;
   color: #fff;
-}
-
-header .header__topMenu .header__topMenu-button .topMenu__button_search {
-  color: rgba(255, 255, 255, 0.6);
 }
 
 header .header__topMenu .redButton {
@@ -93,11 +94,11 @@ header .header__topMenu .nav-green-button {
   box-sizing: border-box;
 }
 
-header .header__topMenu .greenButton:hover {
+header .header__topMenu .nav-green-button:hover {
   background-color: #5fbb2d;
 }
 
-header .header__topMenu .greenButton:active {
+header .header__topMenu .nav-green-button:active {
   background-color: #518534;
   color: rgba(255, 255, 255, 0.51);
 }

@@ -80,17 +80,20 @@ header {
             vertical-align: top;
 
             :hover { background-color: $header-topMenu-background-hover; }
-            :active { background-color: $header-topMenu-background-active; }
+            :active {
+                background-color: $header-topMenu-background-active;
+                color: $header-topMenu-background-active-text;
+            }
         }
+
+        .topMenu__button_search:active { color: #fff; };
 
         .header__topMenu-button {
             font-size: 17px;
             display: block;
-            padding: 8px 20px ;
+            padding: 8px 20px;
             line-height: 24px;
             color: #fff;
-
-            .topMenu__button_search { color: $header-topMenu-background-active-text; };
         };
 
         .redButton {
@@ -115,9 +118,9 @@ header {
             box-sizing: border-box;
         }
 
-        .greenButton:hover { background-color: $greenButton-hover; }
+        .nav-green-button:hover { background-color: $greenButton-hover; }
 
-        .greenButton:active {
+        .nav-green-button:active {
             background-color: $greenButton-active;
             color: $greenButton-active-text;
         }
