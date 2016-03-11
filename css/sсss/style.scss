@@ -33,13 +33,16 @@ $greenButton-active: $dark-green;
 $greenButton-active-text: rgba(255,255,255,.51);
 
 /* - description-contacts-login */
-$phone-border-color: #fff;
+$header-phone-border-color: #fff;
+$header-title: $red;
+$header-phone-text: $red;
 $text-dark-blue: $dark-blue;
 $header-whiteButton-text: #000;
 $header-whiteButton-text-hover: $red;
 $header-whiteButton-text-active: rgba(0,0,0,.3);
 
 /* - navigation */
+$header-navigation-border: $dark-blue;
 $header-navigation-background: $medium-dark-blue;
 $header-navigation-background-hover: $dark-blue;
 $header-navigation-background-active: $mega-dark-blue;
@@ -154,7 +157,7 @@ header {
 
     .header__description {
         padding: 0 53px;
-        color: $red;
+        color: $header-title;
 
         .header__description-title {
             font-style: italic;
@@ -175,9 +178,9 @@ header {
             width: 270px;
             box-sizing: border-box;
             padding: 8px 45px;
-            color: $red;
+            color: $header-title;
             font-size: 21px;
-            border: 3px solid $phone-border-color;
+            border: 3px solid $header-phone-border-color;
         }
 
         .header__address {
@@ -219,7 +222,7 @@ header {
             padding: 15px 0;
             color: white;
             background-color: $header-navigation-background;
-            border-bottom: 5px solid $dark-blue;
+            border-bottom: 5px solid $header-navigation-border;
             text-align: center;
         }
 
