@@ -103,6 +103,17 @@ li {
 .redButton:hover { background-color: $redButton-hover; }
 .redButton:active { background-color: $redButton-active; }
 
+.greenButton {
+    background: $greenButton;
+    color: #fff;
+}
+
+.greenButton:hover { background-color: $greenButton-hover; }
+.greenButton:active {
+    background-color: $greenButton-active;
+    color: $greenButton-active-text;
+}
+
 header {
 
     font-size: 0;
@@ -152,15 +163,15 @@ header {
         }
         .redButton:hover { background-color: $redButton-hover; }
 
-        .nav-green-button {
-            background: $greenButton;
+        .topMenu__buttonOrder {
+            // background: $greenButton;
             min-width: 150px;
             box-sizing: border-box;
         }
 
-        .nav-green-button:hover { background-color: $greenButton-hover; }
+        .topMenu__buttonOrder:hover { background-color: $greenButton-hover; }
 
-        .nav-green-button:active {
+        .topMenu__buttonOrder:active {
             background-color: $greenButton-active;
             color: $greenButton-active-text;
         }
@@ -427,6 +438,39 @@ main {
         margin-bottom: 20px;
         position: relative;
         padding-bottom: 58px;
+        overflow: hidden;
+
+        .catalogItem__hover-buy,
+        .catalogItem__hover-bookmark {
+            display: none;
+            height: 38px;
+            box-sizing: border-box;
+            padding: 9px 38px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 18px;
+            border-radius: 2px;
+            text-transform: uppercase;
+        }
+
+        .catalogItem__hover-buy {
+            box-shadow: inset 0 -3px 0 0 $dark-green;
+            background-image: $background-from-sprite;
+            margin-bottom: 7px;
+        }
+
+        .catalogItem__hover-bookmark {
+            color: #000;
+            padding-left: 25px;
+            padding-right: 25px;
+            border: 3px solid $green;
+        }
+
+        .catalogItem__hover-bookmark:hover { border-color: $medium-dark-blue; }
+        .catalogItem__hover-bookmark:active {
+            border-color: $medium-dark-blue;
+            opacity: 0.3;
+        }
 
         p {
             margin: 0 auto;
@@ -475,9 +519,35 @@ main {
     }
     .catalogItem:nth-of-type(4n) { margin-right: 0; }
 
+    .catalogItem:hover {
+        box-shadow: 0 10px 25px $dark-blue;
+        border-color: transparent;
+        .catalogItem__imageContainer { padding: 45px 42px; }
+        .catalogItem__image { display: none; }
+        .catalogItem__hover-buy { display: block; }
+        .catalogItem__hover-bookmark { display: block; }
+    }
+
+    .catalogItem.new-item::after {
+        content: "new";
+        position: absolute;
+        top: 6px;
+        right: -21px;
+        transform: rotate(45deg);
+        background: $red;
+        overflow: hidden;
+        width: 75px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 4px;
+        color: white;
+    }
+
     .catalogItem__imageContainer {
         height: 180px;
         width: 100%;
+        box-sizing: border-box;
         position: relative;
     }
 
