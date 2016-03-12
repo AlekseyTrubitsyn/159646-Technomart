@@ -1,6 +1,8 @@
 /* Body */
 $container-width: 940px;
 
+$background-from-sprite: url(..img/sprt.png) no-repeat;
+
 $light-grey: #f1f5f7;
 
 $medium-dark-blue: #32425c;
@@ -19,6 +21,8 @@ $dark-green: #518534;
 
 /* Header */
 /* - top-menu*/
+$topMenuLeftWidth: 503px;
+$topMenuRightWidth: 437px;
 $header-background-light-grey-blue: $light-grey;
 $header-topMenu-background: $dark-blue;
 $header-topMenu-background-hover: $ultra-dark-blue;
@@ -48,6 +52,21 @@ $header-navigation-background-hover: $dark-blue;
 $header-navigation-background-active: $mega-dark-blue;
 $header-navigation-background-active-text: rgba(255,255,255,.5);
 
+/* Main */
+
+/* - products-table*/
+
+/* - - products-table-item */
+$productGroupButton: rgba(0,0,0,0.1);
+$productGroupButtonHover: rgba(0,0,0,0.2);
+$productGroupButtonActive: rgba(0,0,0,0.3);
+
+$productGroupMaterials: #f6b22d;
+$productGroupTools: #4aafde;
+$productGroupMachinery: #cc79d1;
+$productGroupDiscount: #85d179;
+$productGroupDelivery: #f6b22d;
+
 body {
     font-family: Cuprum, Arial, sans-serif;
     font-weight: 400;
@@ -73,18 +92,39 @@ li {
 
 .white-button {background: #fff; }
 
-// .background-from-sprite { background: url(..img/sprt.png) no-repeat; }
+.redButton {
+    background: $redButton;
+    text-align: center;
+    text-transform: uppercase;
+}
+.redButton:hover { background-color: $redButton-hover; }
+.redButton:active { background-color: $redButton-active; }
 
 header {
 
     font-size: 0;
     background: $header-background-light-grey-blue;
 
+    .header__topMenu-button {
+        font-size: 17px;
+        display: block;
+        padding: 8px 20px;
+        line-height: 24px;
+        color: #fff;
+    };
+
     .header__topMenu {
 
         background: $header-topMenu-background;
         color: #fff;
         display: block;
+
+        .topMenu__buttonSearch,
+        .topMenu__buttonBookmarks,
+        .topMenu__buttonCart {
+            padding-left: 49px;
+            background: $background-from-sprite;
+        }
 
         .header__topMenu-li {
             display: inline-block;
@@ -97,31 +137,16 @@ header {
             }
         }
 
-        .topMenu__button_search:active { color: #fff; };
-
-        .header__topMenu-button {
-            font-size: 17px;
-            display: block;
-            padding: 8px 20px;
-            line-height: 24px;
-            color: #fff;
-        };
+        .topMenu__buttonSearch:active { color: #fff; };
 
         .redButton {
             width: 220px;
             box-sizing: border-box;
             font-weight: 700;
             font-size: 24px;
-            text-align: center;
-            background: $redButton;
             border-bottom: 5px solid rgba(0,0,0,0.24);
             margin-bottom: -5px;
-            text-transform: uppercase;
         }
-
-        .redButton:hover { background-color: $redButton-hover; }
-
-        .redButton:active { background-color: $redButton-active; }
 
         .nav-green-button {
             background: $greenButton;
@@ -135,18 +160,17 @@ header {
             background-color: $greenButton-active;
             color: $greenButton-active-text;
         }
-
-        .background-from-sprite { padding-left: 49px; }
     }
 
-    .header__topMenu-left,
+    .header__topMenu-left {
+        float: left;
+        width: $topMenuLeftWidth;
+    }
+
     .header__topMenu-right {
-        max-width: 49%
+        float: right;
+        width: $topMenuRightWidth;
     }
-
-    .header__topMenu-left { float: left; }
-
-    .header__topMenu-right { float: right; }
 
     .header__section {
         width: 33.33%;
@@ -175,6 +199,7 @@ header {
         }
 
         .header__phone {
+            background: $background-from-sprite;
             width: 270px;
             box-sizing: border-box;
             padding: 8px 45px;
@@ -203,7 +228,10 @@ header {
 
         .white-button:active { color: $header-whiteButton-text-active; }
 
-        .header__log-in { padding-left: 48px; }
+        .header__log-in {
+            padding-left: 48px;
+            background: $background-from-sprite;
+        }
     }
 
     .header__mainMenu {
@@ -231,6 +259,129 @@ header {
         .header__mainMenu-button:active {
             background-color: $header-navigation-background-active;
             color: $header-navigation-background-active-text;
+        }
+    }
+}
+
+main {
+    padding-top: 59px;
+
+    .productGroup {
+        background: $background-from-sprite;
+        width: 300px;
+        min-height: 123px;
+        box-sizing: border-box;
+        padding: 22px;
+        padding-right: 88px;
+        color: #fff;
+        background-color: #f6b22d;
+        float: left;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .productGroup:last-of-type { margin-right: 0; }
+
+    .productGroupsTable {
+
+        .productGroup__title {
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+            line-height: 20px;
+        }
+
+        .productGroup__button {
+            display: block;
+            width: 135px;
+            box-sizing: border-box;
+            padding: 10px;
+            border-radius: 2px;
+            font-size: 14px;
+            line-height: 18px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            background-color: $productGroupButton;
+        }
+        .productGroup__button:hover {background-color: $productGroupButtonHover; }
+        .productGroup__button:active {background-color: $productGroupButtonActive; }
+
+        .productGroup-new:after {
+            content: "new";
+            position: absolute;
+            top: 6px;
+        	right: -21px;
+            transform: rotate(45deg);
+            background: $red;
+            overflow: hidden;
+            width: 75px;
+            text-align: center;
+        	font-size: 16px;
+        	line-height: 18px;
+        	padding: 4px;
+        }
+
+        .productGroupsTable__productGroup-materials {
+            background-color: $productGroupMaterials;
+            margin-right: 20px;
+        }
+
+        .productGroupsTable__productGroup-tools {
+            background-color: $productGroupTools;
+            margin-right: 20px;
+        }
+        .productGroupsTable__productGroup-machinery { background-color: $productGroupMachinery; }
+        .productGroupsTable__productGroup-discount { background-color: $productGroupDiscount; }
+        .productGroupsTable__productGroup-delivery { background-color: $productGroupDelivery; }
+
+        .slider {
+            float: left;
+            box-sizing: border-box;
+            width: 620px;
+            height: 265px;
+            margin-right: 20px;
+            color: #fff;
+
+            .slider__content {
+                display: block;
+                box-sizing: border-box;
+                width: 620px;
+                height: 265px;
+                padding: 25px;
+                position: relative;
+
+                .slider_topBlock {
+
+                    .slider__title {
+                        margin-top:0;
+                        margin-bottom: 5px;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 36px;
+                    }
+
+                    .slider__description {
+                        font-size: 18px;
+                        margin: 0;
+                    }
+
+                }
+                .slider__button {
+                    position: absolute;
+                    left: 25px;
+                    bottom: 25px;
+                    border-radius: 2px;
+                    text-transform: uppercase;
+                    padding: 12px;
+                    width: 195px;
+                    box-sizing: border-box;
+                    color: #fff;
+                }
+            }
+            .slider__content#slider-1 { background: #9d8c77 url(img/slider-perforator.jpg); }
         }
     }
 }

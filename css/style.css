@@ -3,6 +3,9 @@
 /* - top-menu*/
 /* - description-contacts-login */
 /* - navigation */
+/* Main */
+/* - products-table*/
+/* - - products-table-item */
 body {
   font-family: Cuprum, Arial, sans-serif;
   font-weight: 400;
@@ -31,15 +34,44 @@ a {
   background: #fff;
 }
 
+.redButton {
+  background: #ee3643;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.redButton:hover {
+  background-color: #ca2c37;
+}
+
+.redButton:active {
+  background-color: #ba2732;
+}
+
 header {
   font-size: 0;
   background: #f1f5f7;
+}
+
+header .header__topMenu-button {
+  font-size: 17px;
+  display: block;
+  padding: 8px 20px;
+  line-height: 24px;
+  color: #fff;
 }
 
 header .header__topMenu {
   background: #293449;
   color: #fff;
   display: block;
+}
+
+header .header__topMenu .topMenu__buttonSearch,
+header .header__topMenu .topMenu__buttonBookmarks,
+header .header__topMenu .topMenu__buttonCart {
+  padding-left: 49px;
+  background: url(..img/sprt.png) no-repeat;
 }
 
 header .header__topMenu .header__topMenu-li {
@@ -56,15 +88,7 @@ header .header__topMenu .header__topMenu-li :active {
   color: rgba(255, 255, 255, 0.6);
 }
 
-header .header__topMenu .topMenu__button_search:active {
-  color: #fff;
-}
-
-header .header__topMenu .header__topMenu-button {
-  font-size: 17px;
-  display: block;
-  padding: 8px 20px;
-  line-height: 24px;
+header .header__topMenu .topMenu__buttonSearch:active {
   color: #fff;
 }
 
@@ -73,19 +97,8 @@ header .header__topMenu .redButton {
   box-sizing: border-box;
   font-weight: 700;
   font-size: 24px;
-  text-align: center;
-  background: #ee3643;
   border-bottom: 5px solid rgba(0, 0, 0, 0.24);
   margin-bottom: -5px;
-  text-transform: uppercase;
-}
-
-header .header__topMenu .redButton:hover {
-  background-color: #ca2c37;
-}
-
-header .header__topMenu .redButton:active {
-  background-color: #ba2732;
 }
 
 header .header__topMenu .nav-green-button {
@@ -103,21 +116,14 @@ header .header__topMenu .nav-green-button:active {
   color: rgba(255, 255, 255, 0.51);
 }
 
-header .header__topMenu .background-from-sprite {
-  padding-left: 49px;
-}
-
-header .header__topMenu-left,
-header .header__topMenu-right {
-  max-width: 49%;
-}
-
 header .header__topMenu-left {
   float: left;
+  width: 503px;
 }
 
 header .header__topMenu-right {
   float: right;
+  width: 437px;
 }
 
 header .header__section {
@@ -146,6 +152,7 @@ header .header__phoneAddress .header__phoneAddress-p {
 }
 
 header .header__phoneAddress .header__phone {
+  background: url(..img/sprt.png) no-repeat;
   width: 270px;
   box-sizing: border-box;
   padding: 8px 45px;
@@ -178,6 +185,7 @@ header .header__login-block .white-button:active {
 
 header .header__login-block .header__log-in {
   padding-left: 48px;
+  background: url(..img/sprt.png) no-repeat;
 }
 
 header .header__mainMenu {
@@ -208,6 +216,145 @@ header .header__mainMenu .header__mainMenu-button:hover {
 header .header__mainMenu .header__mainMenu-button:active {
   background-color: #1d2739;
   color: rgba(255, 255, 255, 0.5);
+}
+
+main {
+  padding-top: 59px;
+}
+
+main .productGroup {
+  background: url(..img/sprt.png) no-repeat;
+  width: 300px;
+  min-height: 123px;
+  box-sizing: border-box;
+  padding: 22px;
+  padding-right: 88px;
+  color: #fff;
+  background-color: #f6b22d;
+  float: left;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+main .productGroup:last-of-type {
+  margin-right: 0;
+}
+
+main .productGroupsTable .productGroup__title {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+main .productGroupsTable .productGroup__button {
+  display: block;
+  width: 135px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+main .productGroupsTable .productGroup__button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main .productGroupsTable .productGroup__button:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+main .productGroupsTable .productGroup-new:after {
+  content: "new";
+  position: absolute;
+  top: 6px;
+  right: -21px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #ee3643;
+  overflow: hidden;
+  width: 75px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 4px;
+}
+
+main .productGroupsTable .productGroupsTable__productGroup-materials {
+  background-color: #f6b22d;
+  margin-right: 20px;
+}
+
+main .productGroupsTable .productGroupsTable__productGroup-tools {
+  background-color: #4aafde;
+  margin-right: 20px;
+}
+
+main .productGroupsTable .productGroupsTable__productGroup-machinery {
+  background-color: #cc79d1;
+}
+
+main .productGroupsTable .productGroupsTable__productGroup-discount {
+  background-color: #85d179;
+}
+
+main .productGroupsTable .productGroupsTable__productGroup-delivery {
+  background-color: #f6b22d;
+}
+
+main .productGroupsTable .slider {
+  float: left;
+  box-sizing: border-box;
+  width: 620px;
+  height: 265px;
+  margin-right: 20px;
+  color: #fff;
+}
+
+main .productGroupsTable .slider .slider__content {
+  display: block;
+  box-sizing: border-box;
+  width: 620px;
+  height: 265px;
+  padding: 25px;
+  position: relative;
+}
+
+main .productGroupsTable .slider .slider__content .slider_topBlock .slider__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+main .productGroupsTable .slider .slider__content .slider_topBlock .slider__description {
+  font-size: 18px;
+  margin: 0;
+}
+
+main .productGroupsTable .slider .slider__content .slider__button {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 12px;
+  width: 195px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+main .productGroupsTable .slider .slider__content#slider-1 {
+  background: #9d8c77 url(img/slider-perforator.jpg);
 }
 
 .clearfix::after {
