@@ -269,7 +269,7 @@ header {
             text-align: center;
         }
 
-        .header__mainMenu-button:hover {background-color: $header-navigation-background-hover; }
+        .header__mainMenu-button:hover { background-color: $header-navigation-background-hover; }
 
         .header__mainMenu-button:active {
             background-color: $header-navigation-background-active;
@@ -321,14 +321,14 @@ main {
             color: #fff;
             background-color: $productGroupButton;
         }
-        .productGroup__button:hover {background-color: $productGroupButtonHover; }
-        .productGroup__button:active {background-color: $productGroupButtonActive; }
+        .productGroup__button:hover { background-color: $productGroupButtonHover; }
+        .productGroup__button:active { background-color: $productGroupButtonActive; }
 
         .productGroup-new:after {
             content: "new";
             position: absolute;
             top: 6px;
-        	right: -21px;
+            right: -21px;
             transform: rotate(45deg);
             background: $red;
             overflow: hidden;
