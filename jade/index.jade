@@ -130,6 +130,17 @@ html(lang="ru")
                     img(src="img/brands/aeg.png").catalogBrand__image
                 article.catalogBrand
                     img(src="img/brands/metabo.png").catalogBrand__image
-            .service.container.clearfix
-                h2.service__description-title Сервисы
-                p.service__description-text Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            .service
+                .serviceBlock.container.clearfix
+                    p.service__description-title Сервисы
+                    p.service__description-text Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+                    ul.service__menu
+                        li
+                            a(href="#").serviceMenu__item.serviceMenu__item-active Доставка
+                        li
+                            a(href="#").serviceMenu__item Гарантия
+                        li
+                            a(href="#").serviceMenu__item Кредит
+                    .service__detailsBlock
+                        p.serviceDetailsBlock__title Доставка
+                        p.serviceDetailsBlock__text Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, <br>поднимая его на ваш на этаж!

@@ -3,6 +3,8 @@ $container-width: 940px;
 
 $background-from-sprite: url(..img/sprt.png);
 
+$ptSans: 'PT Sans', Arial, sans-serif;
+
 $light-grey: #f1f5f7;
 
 $medium-dark-blue: #32425c;
@@ -71,6 +73,10 @@ $productGroupDelivery: #f6b22d;
 /* - popular products */
 $popularTitleBlock: #f7f3ec;
 
+/* - service */
+$serviceButtonBorderTop: 1px solid #405069;
+$serviceButtonBorderBottom: 1px solid $dark-blue;
+
 body {
     font-family: Cuprum, Arial, sans-serif;
     font-weight: 400;
@@ -87,6 +93,7 @@ ul,
 li {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
  a {
@@ -412,6 +419,7 @@ main {
             font-size: 30px;
             line-height: 30px;
             margin: 0;
+            font-weight: 700;
             color: $medium-dark-blue;
         }
 
@@ -559,24 +567,116 @@ main {
         transform: translate(-50%, -50%);
     }
 
-    .catalogBrand {
-        float: left;
-        width: 220px;
-        height: 145px;
-        box-sizing: border-box;
-        border: $itemBorder;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        position: relative;
+    .popularBrands {
+        margin-bottom: 65px;
+
+        .catalogBrand {
+            float: left;
+            width: 220px;
+            height: 145px;
+            box-sizing: border-box;
+            border: $itemBorder;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .catalogBrand:nth-of-type(4n) { margin-right: 0; }
+
+        .catalogBrand__image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
-    .catalogBrand:nth-of-type(4n) { margin-right: 0; }
+    .service {
+        padding-top: 61px;
+        min-height: 522px;
+        position: relative;
+        background: $light-grey;
 
-    .catalogBrand__image {
+        .service__description-title {
+            margin: 0;
+            margin-bottom: 27px;
+            width: 400px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 30px;
+        }
+
+        .service__description-text {
+            width: 400px;
+            font-size: 13px;
+            font-family: $ptSans;
+            margin: 0;
+            margin-bottom: 74px;
+        }
+
+    }
+    .service__menu {
+        float: left;
+        width: 240px;
+        margin-right: 80px;
+
+        .serviceMenu__item {
+            padding: 20px 22px;
+            line-height: 30px;
+            font-size: 21px;
+            font-weight: 700;
+            background: $medium-dark-blue;
+            color: #fff;
+            width: 240px;
+            box-sizing: border-box;
+            border-top: $serviceButtonBorderTop;
+            border-bottom: $serviceButtonBorderBottom;
+        }
+
+        .serviceMenu__item:hover:not(.serviceMenu__item-active) { background: $dark-blue; }
+
+        .serviceMenu__item-active {
+            color: $medium-dark-blue;
+            background: #fff;
+            border: #fff;
+            cursor: default;
+        }
+    }
+
+    .service__detailsBlock {
+        float: left;
+        z-index: 2;
+        width: 620px;
+        box-sizing: border-box;
+        color: $medium-dark-blue;
+        position: relative;
+        min-height: 282px;
+
+        .serviceDetailsBlock__title {
+            width: 277px;
+            margin: 0 0 32px;
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+
+        .serviceDetailsBlock__text {
+            width: 277px;
+            font-family: $ptSans;
+            font-size: 13px;
+            line-height: 24px;
+            margin: 0;
+        }
+    }
+
+    .service__detailsBlock::after {
+        content: "";
+        z-index: -1;
+        width: 468px;
+        height: 261px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 21px;
+        right: 0;
+        background: url(../img/delivery.png);
     }
 }
 
