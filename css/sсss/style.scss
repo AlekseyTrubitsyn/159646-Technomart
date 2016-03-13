@@ -107,7 +107,9 @@ li {
     background: $redButton;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
 }
+
 .redButton:hover { background-color: $redButton-hover; }
 .redButton:active { background-color: $redButton-active; }
 
@@ -677,6 +679,85 @@ main {
         top: 21px;
         right: 0;
         background: url(../img/delivery.png);
+    }
+
+    .aboutBlock {
+        padding: 80px 0 86px;
+
+        .aboutBlock__left,
+        .aboutBlock__right {
+            float: left;
+        }
+
+        .aboutBlock__left {
+            width: 540px;
+            margin-right: 100px;
+        }
+
+        .aboutBlock__right { width: 300px; }
+
+        .aboutBlock__title {
+            margin: 0;
+            margin-bottom: 35px;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .aboutBlock__text {
+            margin: 0;
+            margin-bottom: 35px;
+            font-family: $ptSans;
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        .aboutBlock__partnersList {
+            margin: 0;
+            margin-bottom: 33px;
+        }
+
+        .aboutBlock__partner {
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 18px;
+            line-height: 20px;
+            padding-left: 36px;
+            position: relative;
+        }
+
+        .aboutBlock__partner::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background: $red;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .aboutBlock__button {
+            padding: 12px;
+            border-radius: 2px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .aboutBlock__left {
+            .aboutBlock__button {
+                width: 220px;
+                box-sizing: border-box;
+            }
+            .aboutBlock__text:last-of-type { margin-bottom: 20px; }
+        }
+
+        .aboutBlock__right {
+            .aboutBlock__text { width: 220px; }
+            .aboutBlock__mapBlock {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
     }
 }
 
