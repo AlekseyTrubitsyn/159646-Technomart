@@ -557,6 +557,30 @@ main .catalogItem__image {
           transform: translate(-50%, -50%);
 }
 
+main .catalogBrand {
+  float: left;
+  width: 220px;
+  height: 145px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+main .catalogBrand:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+main .catalogBrand__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .clearfix::after {
   content: "";
   display: table;
