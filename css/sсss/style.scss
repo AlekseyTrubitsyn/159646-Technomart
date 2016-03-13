@@ -53,6 +53,7 @@ $header-navigation-background-active: $mega-dark-blue;
 $header-navigation-background-active-text: rgba(255,255,255,.5);
 
 /* Main */
+$itemBorder: 1px solid #e5e5e5;
 
 /* - products-table*/
 
@@ -433,7 +434,7 @@ main {
         width: 220px;
         height: 318px;
         box-sizing: border-box;
-        border: 1px solid #e5e5e5;
+        border: $itemBorder;
         margin-right: 20px;
         margin-bottom: 20px;
         position: relative;
@@ -552,6 +553,26 @@ main {
     }
 
     .catalogItem__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .catalogBrand {
+        float: left;
+        width: 220px;
+        height: 145px;
+        box-sizing: border-box;
+        border: $itemBorder;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .catalogBrand:nth-of-type(4n) { margin-right: 0; }
+
+    .catalogBrand__image {
         position: absolute;
         top: 50%;
         left: 50%;
