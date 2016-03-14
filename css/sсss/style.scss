@@ -1,7 +1,7 @@
 /* Body */
 $container-width: 940px;
 
-$background-from-sprite: url(..img/sprt.png);
+$background-from-sprite: url(../img/sprt.png);
 
 $ptSans: 'PT Sans', Arial, sans-serif;
 
@@ -142,6 +142,17 @@ li {
     color: $greenButton-active-text;
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 header {
 
     font-size: 0;
@@ -167,8 +178,43 @@ header {
         .topMenu__buttonBookmarks,
         .topMenu__buttonCart {
             padding-left: 49px;
-            background-image: $background-from-sprite;
+            position: relative;
         }
+
+        .topMenu__buttonSearch::before,
+        .topMenu__buttonBookmarks::before,
+        .topMenu__buttonCart::before {
+            content: "";
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            top: 50%;
+            left: 17px;
+            transform: translateY(-50%);
+            background-image: $background-from-sprite;
+            background-position: 0 0;
+        }
+
+        .topMenu__buttonSearch:hover::before { background-position: 0 -30px;}
+        .topMenu__buttonSearch:active::before { background-position: 0 -60px; }
+
+        .topMenu__buttonBookmarks::before {
+            width: 14px;
+            height: 16px;
+            background-position: -30px 0;
+        }
+
+        .topMenu__buttonBookmarks:hover::before { background-position: -30px -30px; }
+        .topMenu__buttonBookmarks:active::before { background-position: -30px -60px; }
+
+        .topMenu__buttonCart::before {
+            width: 17px;
+            height: 16px;
+            background-position: -60px 0;
+        }
+
+        .topMenu__buttonCart:hover::before { background-position: -60px -30px; }
+        .topMenu__buttonCart:active::before { background-position: -60px -60px; }
 
         .header__topMenu-li {
             display: inline-block;
@@ -239,13 +285,25 @@ header {
         }
 
         .header__phone {
-            background-image: $background-from-sprite;
             width: 270px;
             box-sizing: border-box;
             padding: 8px 45px;
             color: $header-title;
             font-size: 21px;
             border: 3px solid $header-phone-border-color;
+            position: relative;
+        }
+
+        .header__phone::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            width: 19px;
+            height: 19px;
+            background-image: $background-from-sprite;
+            background-position: 0 -90px;
         }
 
         .header__address {
@@ -270,8 +328,23 @@ header {
 
         .header__log-in {
             padding-left: 48px;
-            background-image: $background-from-sprite;
+            position: relative;
         }
+
+        .header__log-in::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 17px;
+            background-image: $background-from-sprite;
+            background-position: -90px 0;
+        }
+
+        .header__log-in:hover::before { background-position: -90px -30px; }
+        .header__log-in:active::before { background-position: -90px -60px; }
     }
 
     .header__mainMenu {
@@ -307,7 +380,7 @@ main {
     padding-top: 59px;
 
     .productGroup {
-        background-image: $background-from-sprite;
+        // background-image: $background-from-sprite;
         width: 300px;
         min-height: 123px;
         box-sizing: border-box;
@@ -319,6 +392,7 @@ main {
         margin-bottom: 20px;
         position: relative;
         overflow: hidden;
+        position: relative;
     }
 
     .productGroup:last-of-type { margin-right: 0; }
@@ -349,19 +423,15 @@ main {
         .productGroup__button:hover { background-color: $productGroupButtonHover; }
         .productGroup__button:active { background-color: $productGroupButtonActive; }
 
-        .productGroup-new:after {
-            content: "new";
+        .productGroup-new::after {
+            content: "";
             position: absolute;
-            top: 6px;
-            right: -21px;
-            transform: rotate(45deg);
-            background: $red;
-            overflow: hidden;
-            width: 75px;
-            text-align: center;
-        	font-size: 16px;
-        	line-height: 18px;
-        	padding: 4px;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-image: $background-from-sprite;
+            background-position: -540px 0;
         }
 
         .productGroupsTable__productGroup-materials {
@@ -369,13 +439,57 @@ main {
             margin-right: 20px;
         }
 
+        .productGroupsTable__productGroup-machinery { background-color: $productGroupMachinery; }
+        .productGroupsTable__productGroup-discount { background-color: $productGroupDiscount; }
+        .productGroupsTable__productGroup-delivery { background-color: $productGroupDelivery; }
+
+        .productGroupsTable__productGroup-materials::before,
+        .productGroupsTable__productGroup-tools::before,
+        .productGroupsTable__productGroup-machinery::before,
+        .productGroupsTable__productGroup-discount::before,
+        .productGroupsTable__productGroup-delivery::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 65px;
+            transform: translate(50%,-50%);
+            background-image: $background-from-sprite;
+        }
+
+        .productGroupsTable__productGroup-materials::before {
+            width: 44px;
+            height: 65px;
+            background-position: -30px -90px;
+        }
+
+        .productGroupsTable__productGroup-tools::before {
+            width: 75px;
+            height: 61px;
+            background-position: -90px -90px;
+        }
+
+        .productGroupsTable__productGroup-machinery::before {
+            width: 79px;
+            height: 62px;
+            background-position: -180px -90px;
+        }
+
+        .productGroupsTable__productGroup-discount::before {
+            width: 59px;
+            height: 71px;
+            background-position: -270px -90px;
+        }
+
+        .productGroupsTable__productGroup-delivery::before {
+            width: 78px;
+            height: 63px;
+            background-position: -360px -90px;
+        }
+
         .productGroupsTable__productGroup-tools {
             background-color: $productGroupTools;
             margin-right: 20px;
         }
-        .productGroupsTable__productGroup-machinery { background-color: $productGroupMachinery; }
-        .productGroupsTable__productGroup-discount { background-color: $productGroupDiscount; }
-        .productGroupsTable__productGroup-delivery { background-color: $productGroupDelivery; }
 
         .slider {
             float: left;
@@ -464,7 +578,6 @@ main {
         margin-bottom: 20px;
         position: relative;
         padding-bottom: 58px;
-        overflow: hidden;
 
         .catalogItem__hover-buy,
         .catalogItem__hover-bookmark {
@@ -481,9 +594,24 @@ main {
 
         .catalogItem__hover-buy {
             box-shadow: inset 0 -3px 0 0 $dark-green;
-            background-image: $background-from-sprite;
             margin-bottom: 7px;
+            position: relative;
         }
+
+        .catalogItem__hover-buy::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 13px;
+            transform: translateY(-50%);
+            background-image: $background-from-sprite;
+            background-position: -180px 0;
+            width: 17px;
+            height: 16px;
+        }
+
+        .catalogItem__hover-buy:hover::before { background-position: -180px -30px; }
+        .catalogItem__hover-buy:active::before { background-position: -180px -60px; }
 
         .catalogItem__hover-bookmark {
             color: #000;
@@ -555,20 +683,30 @@ main {
     }
 
     .catalogItem.new-item::after {
-        content: "new";
+        content: "";
         position: absolute;
-        top: 6px;
-        right: -21px;
-        transform: rotate(45deg);
-        background: $red;
-        overflow: hidden;
-        width: 75px;
-        text-align: center;
-        font-size: 16px;
-        line-height: 18px;
-        padding: 4px;
-        color: white;
+        top: -1px;
+        right: -1px;
+        width: 60px;
+        height: 60px;
+        background-image: $background-from-sprite;
+        background-position: -540px 0;
     }
+
+    //     content: "new";
+    //     position: absolute;
+    //     top: 6px;
+    //     right: -21px;
+    //     transform: rotate(45deg);
+    //     background: $red;
+    //     overflow: hidden;
+    //     width: 75px;
+    //     text-align: center;
+    //     font-size: 16px;
+    //     line-height: 18px;
+    //     padding: 4px;
+    //     color: white;
+    // }
 
     .catalogItem__imageContainer {
         height: 180px;
@@ -606,6 +744,17 @@ main {
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        .catalogBrand__link {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .catalogBrand:hover { box-shadow: 0 10px 25px $dark-blue; }
+    .catalogBrand:active {
+        box-shadow: 0 4px 10px $dark-blue;
+        opacity: 0.3;
     }
 
     .service {
@@ -867,7 +1016,19 @@ footer {
             .footer__socialButton {
                 display: inline-block;
                 margin-right: 4px;
+                background-image: $background-from-sprite;
+                background-color: $ultra-dark-blue;
+                width: 42px;
+                height: 42px;
+                border-radius: 21px;
             }
+            .footer__socialButton:hover { background-color: $red; }
+
+            .footer__socialButton-vk { background-position: -390px 0; }
+
+            .footer__socialButton-fb { background-position: -435px 0; }
+
+            .footer__socialButton-insta { background-position: -480px 0; }
         }
 
         .footer__feedbackButton {
@@ -880,7 +1041,7 @@ footer {
         .footer__feedbackButton-gold { color: $footerGoldLink; }
 
         .footer__feedbackButton:hover .footer__feedbackButton-gold { text-decoration: underline; };
-        
+
         .footer__feedbackButton:active .footer__feedbackButton-gold{
             text-decoration: none;
             color: $red;
