@@ -77,6 +77,11 @@ $popularTitleBlock: #f7f3ec;
 $serviceButtonBorderTop: 1px solid #405069;
 $serviceButtonBorderBottom: 1px solid $dark-blue;
 
+/* footer */
+$gold: #ffd180;
+$footerSecondMenuItemColor: $gold;
+$footerGoldLink: $gold;
+
 body {
     font-family: Cuprum, Arial, sans-serif;
     font-weight: 400;
@@ -100,6 +105,19 @@ li {
     text-decoration: none;
     display: block;
  }
+
+ p { margin: 0; }
+
+.logoButton {
+    width: 220px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 24px;
+    border-bottom: 5px solid rgba(0,0,0,0.24);
+    text-transform: uppercase;
+    min-height: 47px;
+    padding: 6px 20px;
+}
 
 .white-button {background: #fff; }
 
@@ -130,6 +148,8 @@ header {
     background: $header-background-light-grey-blue;
 
     .header__topMenu-button {
+        min-height: 42px;
+        box-sizing: border-box;
         font-size: 17px;
         display: block;
         padding: 8px 20px;
@@ -164,11 +184,6 @@ header {
         .topMenu__buttonSearch:active { color: #fff; };
 
         .redButton {
-            width: 220px;
-            box-sizing: border-box;
-            font-weight: 700;
-            font-size: 24px;
-            border-bottom: 5px solid rgba(0,0,0,0.24);
             margin-bottom: -5px;
         }
         .redButton:hover { background-color: $redButton-hover; }
@@ -758,6 +773,120 @@ main {
                 margin-bottom: 40px;
             }
         }
+    }
+}
+footer {
+    background: $medium-dark-blue;
+    color: #fff;
+    .logoButton {
+        font-size: 30px;
+        min-height: 69px;
+        line-height: 30px;
+        padding: 17px 20px;
+    }
+    .logoButton,
+    .footer__addressPhone {
+    float: left;
+    }
+
+    .footerTopMenu,
+    .footerSecondMenu {
+        float: right;
+        font-size: 0;
+    }
+    .footerTopMenu {
+        margin-top: 20px;
+    }
+
+    .footerTopMenu__item,
+    .footerSecondMenu__item {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .footerTopMenu__item:last-of-type  {
+        .footerTopMenu__item-link {
+            padding-right: 0;
+        }
+    }
+
+
+    .footerSecondMenu__item:last-of-type  {
+        .footerSecondMenu__item-link {
+            padding-right: 0;
+        }
+    }
+
+    .footerTopMenu__item-link {
+        display: block;
+        color: #fff;
+        padding: 15px 30px;
+    }
+
+    .footerSecondMenu__item-link {
+        display: block;
+        padding: 15px 30px;
+        color: $footerSecondMenuItemColor;
+    }
+
+    .footerTopMenu__item-link:hover,
+    .footerSecondMenu__item-link:hover {
+        text-decoration: underline;
+    };
+
+    .footerTopMenu__item-link:active,
+    .footerSecondMenu__item-link:active {
+        text-decoration: none;
+        opacity: 0.5;
+    };
+
+    .footer__line-second {
+        padding-top: 23px;
+        padding-bottom: 50px;
+    }
+
+    .footer__line-third {
+        background: $dark-blue;
+        padding: 34px 0;
+
+        .bottomLine__block-left {
+            float: left;
+            width: 330px;
+            box-sizing: border-box;
+            margin-right: 70px;
+        }
+
+        .footer__socials {
+            float: left;
+            // width: 330px;
+            box-sizing: border-box;
+
+             a { color: #fff; }
+
+            .footer__socialButton {
+                display: inline-block;
+                margin-right: 4px;
+            }
+        }
+
+        .footer__feedbackButton {
+            // display: block;
+            float: left;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .footer__feedbackButton-gold { color: $footerGoldLink; }
+
+        .footer__feedbackButton:hover .footer__feedbackButton-gold { text-decoration: underline; };
+        
+        .footer__feedbackButton:active .footer__feedbackButton-gold{
+            text-decoration: none;
+            color: $red;
+        }
+
+        .footer__feedbackButton-gold { color: $footerGoldLink }
     }
 }
 
