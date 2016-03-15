@@ -12,7 +12,9 @@
         <div class="container">
           <ul class="header__topMenu-left clearfix">
             <li class="header__topMenu-li"><a href="#" class="redButton logoButton">Техномарт</a></li>
-            <li class="header__topMenu-li"><a href="#" class="header__topMenu-button topMenu__buttonSearch">Поиск:</a></li>
+            <form method="get" action="#" class="header__topMenu-li topMenu-searchForm">
+              <input type="text" placeholder="Поиск:" class="topMenu__buttonSearch topMenu-searchInput">
+            </form>
           </ul>
           <ul class="header__topMenu-right clearfix">
             <li class="header__topMenu-li"><a href="#" class="header__topMenu-button topMenu__buttonBookmarks">Закладки: <span>0</span></a></li>
@@ -30,7 +32,7 @@
           <p class="header__phoneAddress-p header__phone">+7 (812) 555-05-55</p>
           <p class="header__phoneAddress-p header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </section>
-        <section class="header__section header__login-block clearfix"><a href="#" class="white-button header__register">Регистрация</a><a href="#" class="white-button header__log-in">Войти</a></section>
+        <section class="header__section header__login-block clearfix"><a href="#" class="white-button header__log-in">Войти</a><a href="#" class="white-button header__register">Регистрация</a></section>
       </div>
       <div class="container clearfix">
         <nav class="header__navigationBlock">
@@ -74,7 +76,7 @@
       </div>
       <div class="popularProducts container clearfix">
         <div class="popularTitleBlock">
-          <h2 class="popularTitleBlock__title">Популярные товары</h2><a href="#" class="redButton popularTitleBlock__button">Все популярные товары</a>
+          <h2 class="popularTitleBlock__title">Популярные товары:</h2><a href="#" class="redButton popularTitleBlock__button">Все популярные товары</a>
         </div>
         <article class="catalogItem">
           <div class="catalogItem__imageContainer"><img src="img/catalog/bosch-bfg-9000.png" width="" height="" class="catalogItem__image"><a href="#" class="greenButton catalogItem__hover-buy">Купить</a><a href="#" class="catalogItem__hover-bookmark">В закладки                        </a></div>
