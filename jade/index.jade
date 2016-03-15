@@ -13,9 +13,11 @@ html(lang="ru")
                 .container
                     ul.header__topMenu-left.clearfix
                         li.header__topMenu-li
-                            a(href="#").header__topMenu-button.redButton Техномарт
-                        li.header__topMenu-li
-                            a(href="#").header__topMenu-button.topMenu__buttonSearch Поиск:
+                            a(href="#").redButton.logoButton Техномарт
+                        //- li.header__topMenu-li
+                        //-     a(href="#").header__topMenu-button.topMenu__buttonSearch Поиск:
+                        form(method="get" action="#").header__topMenu-li.topMenu-searchForm
+                            input(type="text" placeholder="Поиск:").topMenu__buttonSearch.topMenu-searchInput
                     ul.header__topMenu-right.clearfix
                         li.header__topMenu-li
                             a(href="#").header__topMenu-button.topMenu__buttonBookmarks Закладки: 
@@ -33,8 +35,8 @@ html(lang="ru")
                     p.header__phoneAddress-p.header__phone +7 (812) 555-05-55
                     p.header__phoneAddress-p.header__address г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                 section.header__section.header__login-block.clearfix
-                    a(href="#").white-button.header__register Регистрация
                     a(href="#").white-button.header__log-in Войти
+                    a(href="#").white-button.header__register Регистрация
             .container.clearfix
                 nav.header__navigationBlock
                     ul.header__mainMenu
@@ -77,14 +79,14 @@ html(lang="ru")
                     a(href="#").productGroup__button Бесплатно
             .popularProducts.container.clearfix
                 .popularTitleBlock
-                    h2.popularTitleBlock__title Популярные товары
+                    h2.popularTitleBlock__title Популярные товары:
                     a(href="#").redButton.popularTitleBlock__button Все популярные товары
                 article.catalogItem
                     .catalogItem__imageContainer
                         img(src="img/catalog/bosch-bfg-9000.png" width="" height="").catalogItem__image
                         a(href="#").greenButton.catalogItem__hover-buy Купить
                         a(href="#").catalogItem__hover-bookmark В закладки                        
-                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp9000
+                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp;9000
                     p.catalogItem__price-old 32500 Р.
                     p.catalogItem__price 25500 Р.
                 article.catalogItem
@@ -92,7 +94,7 @@ html(lang="ru")
                         img(src="img/catalog/bosch-bfg-3000.png" width="" height="").catalogItem__image
                         a(href="#").greenButton.catalogItem__hover-buy Купить
                         a(href="#").catalogItem__hover-bookmark В закладки                        
-                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp3000
+                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp;3000
                     p.catalogItem__price-old 22500 Р.
                     p.catalogItem__price 15500 Р.
                 article.catalogItem
@@ -100,7 +102,7 @@ html(lang="ru")
                         img(src="img/catalog/bosch-bfg-6000.png" width="" height="").catalogItem__image
                         a(href="#").greenButton.catalogItem__hover-buy Купить
                         a(href="#").catalogItem__hover-bookmark В закладки                        
-                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp6000
+                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp;6000
                     p.catalogItem__price-old 30500 Р.
                     p.catalogItem__price 25500 Р.
                 article.catalogItem.new-item
@@ -108,28 +110,111 @@ html(lang="ru")
                         img(src="img/catalog/bosch-bfg-2000.png" width="" height="").catalogItem__image
                         a(href="#").greenButton.catalogItem__hover-buy Купить
                         a(href="#").catalogItem__hover-bookmark В закладки                        
-                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp2000
+                    p.catalogItem__text Перфоратор BOSCH BFG&nbsp;2000
                     p.catalogItem__price 12500 Р.
             .popularBrands.container.clearfix
                 .popularTitleBlock
                     h2.popularTitleBlock__title Популярные производители
                     a(href="#").redButton.popularTitleBlock__button Все производители
                 article.catalogBrand
-                    img(src="img/brands/bosch.png").catalogBrand__image
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/bosch.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/makita.png").catalogBrand__image
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/makita.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/dewalt.png").catalogBrand__image
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/dewalt.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/interskol.png").catalogBrand__image
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/interskol.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/hitachi.png").catalogBrand__image
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/hitachi.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/lg.png").catalogBrand__image
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/lg.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/aeg.png").catalogBrand__image
+                    a(href="#").catalogBrand__link                
+                        img(src="img/brands/aeg.png").catalogBrand__image
                 article.catalogBrand
-                    img(src="img/brands/metabo.png").catalogBrand__image
-            .service.container.clearfix
-                h2.service__description-title Сервисы
-                p.service__description-text Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+                    a(href="#").catalogBrand__link
+                        img(src="img/brands/metabo.png").catalogBrand__image
+            .service
+                .serviceBlock.container.clearfix
+                    p.service__description-title Сервисы
+                    p.service__description-text Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+                    ul.service__menu
+                        li
+                            a(href="#").serviceMenu__item.serviceMenu__item-active Доставка
+                        li
+                            a(href="#").serviceMenu__item Гарантия
+                        li
+                            a(href="#").serviceMenu__item Кредит
+                    .service__detailsBlock
+                        p.serviceDetailsBlock__title Доставка
+                        p.serviceDetailsBlock__text Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, <br>поднимая его на ваш на этаж!
+            .aboutBlock.container.clearfix
+                .aboutBlock__left
+                    h2.aboutBlock__title Компания «Техномарт»
+                    p.aboutBlock__text Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.
+                    p.aboutBlock__text Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:
+                    ul.aboutBlock__partnersList
+                        li.aboutBlock__partner Деловые линии
+                        li.aboutBlock__partner Автотрейдинг
+                        li.aboutBlock__partner ЖелДорЭкспедиция
+                    a(href="#").redButton.aboutBlock__button Подробней о компании
+                .aboutBlock__right
+                    h2.aboutBlock__title Контакты
+                    p.aboutBlock__text Вы можете забрать товар сами, заехав в наш офис:
+                    .aboutBlock__mapBlock
+                        img(src="img/map.jpg" width="300" height="158")
+                    a(href="#").redButton.aboutBlock__button Заблудились? Напишите нам!
+        footer
+            .container.clearfix
+                .footer__line-first.clearfix
+                    a(href="#").redButton.logoButton Техномарт
+                    ul.footerTopMenu
+                        li.footerTopMenu__item
+                            a(href="#").footerTopMenu__item-link Компания
+                        li.footerTopMenu__item
+                            a(href="#").footerTopMenu__item-link Новости
+                        li.footerTopMenu__item
+                            a(href="#").footerTopMenu__item-link Каталог
+                        li.footerTopMenu__item
+                            a(href="#").footerTopMenu__item-link Доставка
+                        li.footerTopMenu__item
+                            a(href="#").footerTopMenu__item-link Контакты
+                .footer__line-second.clearfix
+                    p.footer__addressPhone г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> +7 (812) 555-05-55
+                    ul.footerSecondMenu
+                        li.footerSecondMenu__item
+                            a(href="#").footerSecondMenu__item-link
+                                span.footerMenu__underline Материалы
+                        li.footerSecondMenu__item
+                            a(href="#").footerSecondMenu__item-link
+                                span.footerMenu__underline Техника
+                        li.footerSecondMenu__item
+                            a(href="#").footerSecondMenu__item-link
+                                span.footerMenu__underline Инструмент
+                        li.footerSecondMenu__item
+                            a(href="#").footerSecondMenu__item-link
+                                span.footerMenu__underline Спецпредложения
+            .footer__line-third
+                .container.clearfix
+                    p.bottomLine__block-left © 2010–2016 Компания «Техномарт»<br>Все права защищены
+                    .footer__socials
+                        a(href="#").footer__socialButton.footer__socialButton-vk
+                            span.visually-hidden vkontakte
+                        a(href="#").footer__socialButton.footer__socialButton-fb
+                            span.visually-hidden facebook
+                        a(href="#").footer__socialButton.footer__socialButton-insta
+                            span.visually-hidden instagram
+                    //- .footer__feedback
+                    a(href="#").footer__feedbackButton Обратная связь:<br>
+                        span.footer__feedbackButton-gold mail@htmlacademy.ru
+                    //- .footer__copyright
+                    a(href="#").footer__feedbackButton Разработано —<br>
+                        span.footer__feedbackButton-gold htmlacademy.ru
+                    
+                
